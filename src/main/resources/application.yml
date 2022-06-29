@@ -1,0 +1,11 @@
+server:
+  port: 8080
+spring:
+  jackson:
+    deserialization:
+      ACCEPT_SINGLE_VALUE_AS_ARRAY: true
+
+org:
+  trade:
+    option:
+      baseUrl: http://localhost:9020

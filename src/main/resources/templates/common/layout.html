@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" lang="en">
+<head>
+    <!--/* This is the common Thymeleaf layout page that should be used for most system html pages */-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title layout:title-pattern="$LAYOUT_TITLE  $CONTENT_TITLE">Option Chain Analysis</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/common/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="/common/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+    <meta name="theme-color" content="#7952b3">
+     <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <link href="/core/css/dashboard.css" rel="stylesheet">
+</head>
+<body>
+    <th:block layout:fragment="headerFragment">
+        <div th:include="~{common/fragments :: headerFragment}"></div>
+    </th:block>
+    <div class="container-fluid">
+        <div class="row">
+            <th:block layout:fragment="navBar">
+                <div th:include="~{common/fragments :: navBar}"></div>
+            </th:block>
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <!--<th:block layout:fragment="subHeader">
+                    <div th:include="~{common/fragments :: subHeader}"></div>
+                </th:block>-->
+                <th:block layout:fragment="content">
+                        <div layout:fragment="content" id="content"></div>
+                </th:block>
+                <input type="hidden" th:value="${active}" id="active">
+            </main>
+        </div>
+    </div>
+    <script src="/common/js/jquery-3.5.1.js"></script>
+    <script src="/common/js/jquery.dataTables.min.js"></script>
+    <script src="/common/js/dataTables.bootstrap5.min.js"></script>
+    <script src="/common/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-zoom/1.0.0/chartjs-plugin-zoom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-adapter-moment/1.0.0/chartjs-adapter-moment.min.js"></script>
+    <script src="/common/js/common.js"></script>
+    <script src="/common/js/custom.dataTable.js"></script>
+    <th:block layout:fragment="javascript"></th:block>
+</body>
+<script type="text/javascript"></script>
+</html>

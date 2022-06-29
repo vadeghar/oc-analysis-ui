@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/layout}" lang="en">
+<head>
+    <title>
+        <th:block>Index</th:block>
+    </title>
+</head>
+<body>
+<th:block layout:fragment="content">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Charts</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+            <div class="btn-group me-2">
+                <button type="button" class="btn btn-sm btn-outline-secondary refresh"><i class="bi bi-arrow-repeat"></i>Refresh</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-24 col-xs-12" id="contentBlock1">
+        <div class="chart-container-lg col">
+            <canvas  id="niftyChart"></canvas>
+        </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-24 col-xs-12" id="contentBlock2">
+        <div class="chart-container-lg col">
+            <canvas  id="bankNiftyChart"></canvas>
+        </div>
+    </div>
+</th:block>
+<th:block layout:fragment="javascript">
+    <script src="core/js/index.js"></script>
+</th:block>
+</body>
+</html>
