@@ -244,7 +244,7 @@ var bankNiftyPeChartCtx = document.getElementById('bankNiftyPeChart');
 function loadChartData() {
     $.ajax('/nifty/refresh', {
         dataType: 'json', // type of response data
-        timeout: 5000,     // timeout milliseconds
+        timeout: 15000,     // timeout milliseconds
         success: function (data,status,xhr) {   // success callback function
             $.each(data.niftyCeList, function(i, item) {
                 if(i <=6) {
@@ -282,7 +282,7 @@ function loadChartData() {
 
     $.ajax('/bank/refresh', {
             dataType: 'json', // type of response data
-            timeout: 5000,     // timeout milliseconds
+            timeout: 15000,     // timeout milliseconds
             success: function (data,status,xhr) {   // success callback function
                 $.each(data.bankNiftyCeList, function(i, item) {
                     if(i <=6) {

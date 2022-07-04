@@ -22,7 +22,7 @@ $.ajax({
         url: '/nifty/refreshIndexes',
         method: 'get',
         dataType: 'json', // type of response data
-        timeout: 5000,     // timeout milliseconds
+        timeout: 15000,     // timeout milliseconds
         success: function (data,status,xhr) {   // success callback function
             $.each(data.niftyToday, function(i, item) {
 //                console.log('Index: '+i+" strike: "+item.addedTs);
