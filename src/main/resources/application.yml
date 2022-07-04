@@ -8,4 +8,4 @@ spring:
 org:
   trade:
     option:
-      baseUrl: http://localhost:9020
+      baseUrl: http://144.24.128.202:9020
